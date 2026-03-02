@@ -1,0 +1,19 @@
+name: Deploy
+
+on:
+  pull_request:
+    branches: [main, master]
+    types: [closed]
+
+jobs:
+  deploy:
+    name: Deploy
+    if: github.event.pull_request.merged == true
+    uses: quality-digital/reusable-workflows/.github/workflows/deploy.yml@main
+    secrets: inherit
+
+  pos-deploy:
+    name: Pos-Deploy
+    needs: deploy
+    uses: quality-digital/reusable-workflows/.github/workflows/pos-deploy.yml@main
+    secrets: inherit

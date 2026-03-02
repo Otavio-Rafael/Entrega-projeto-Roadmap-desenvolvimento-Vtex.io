@@ -1,0 +1,18 @@
+{
+  "vendor": "acctglobal",
+  "name": "reactpokeapi",
+  "version": "0.0.0",
+  "title": "React App Template",
+  "builders": {
+    "docs": "0.x",
+    "react": "3.x",
+    "styles": "2.x",
+    "store": "0.x"
+  },
+  "dependencies": {
+    "vtex.css-handles": "1.x",
+    "vtex.render-runtime": "8.x",
+    "vtex.device-detector": "0.x"
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

@@ -1,0 +1,95 @@
+.skuSelectorContainer--quickview .skuSelectorItemImage .frameAround, .skuSelectorContainer--quickview .skuSelectorItemImage .skuSelectorInternalBox {
+  border-radius: 0%;
+}
+
+.container :global(.vtex-modal-layout-0-x-triggerContainer) {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.container:hover :global(.vtex-modal-layout-0-x-triggerContainer) {
+  opacity: 1;
+}
+
+@media screen and (max-width: 40em) {
+  .container :global(.vtex-modal-layout-0-x-triggerContainer) {
+    display: none;
+  }
+}
+
+.nameContainer {
+  justify-content: start;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+.brandName {
+  font-weight: 600;
+  font-size: 18px;
+  color: #cf621e; /*cor nomes dos produtos */
+}
+
+.container {
+  text-align: start;
+  background: #f4f4f4;
+  border-radius: 0%;
+  padding: 0.1rem;
+  margin-bottom: 1.5px;
+  max-width: auto;
+  padding-top: 0; 
+  padding-bottom: 0;
+}
+
+.imageContainer {
+  text-align: center;
+  min-height: 500px;
+  padding-top: 0 !important; 
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: -8px !important;
+}
+
+.image {
+  border-radius: 0rem;
+  min-height: 600px;
+  padding-top: 0; 
+  padding-bottom: 0;
+}
+.container--pudim {
+  max-width: unset !important;
+  padding-bottom: 0% !important;
+}
+.element{
+  padding-top: 0; 
+  padding-bottom: 0;
+}
+.imageNormal{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 600px;
+}
+.brandName{
+  color: #000;
+font-family: Arial, Helvetica, sans-serif;
+text-transform: uppercase; 
+font-weight: normal;
+font-size: 0.800rem;
+}
+.productNameContainer {
+  padding-top: 10px;
+  padding-left: 13px;
+}
+/* Cursor no card quando houver 
+.container:hover { 
+  cursor: pointer; 
+}
+/* Zoom suave na imagem ao passar o mouse 
+.image {
+  transition: transform .35s ease;
+}
+
+ Para garantir que nada vaze fora do card 
+.imageContainer { 
+  overflow: hidden; 
+} */

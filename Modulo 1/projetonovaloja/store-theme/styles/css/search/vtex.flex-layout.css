@@ -1,0 +1,51 @@
+.flexRow--orderByAndSwitcher {
+  padding-right: 1em;
+}
+
+.flexRowContent--savingsSummaryListDesktop {
+  justify-content: flex-start;
+}
+
+.flexCol--summaryRightListDesktop {
+  justify-content: space-around;
+}
+
+.flexRow--buyNowButton :global(.vtex-button) {
+  background: #eef3f7;
+  border-color:#eef3f7;
+  color: #0f3e99;
+}
+
+.flexRow--buyNowButton:hover :global(.vtex-button) {
+  background: #dbe9fd;
+  border-color:#dbe9fd;
+}
+
+.flexCol--summaryDetailsListMobile {
+  justify-content: space-between;
+}
+
+.flexCol--summaryUpDetailsListMobile {
+  margin-bottom: 0.25rem
+}
+.flexRowContent--otavio-price{
+  background-color: #ffffff;
+  justify-content: space-between;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+.flexRow--shelf-otavio{
+  background-color: #f4f4f4;
+}
+.flexRow--shelf-otavio :global(.vtex-store-components-3-x-container){
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+  padding-top: 0.1rem !important;
+  padding-bottom: 0 !important;
+  max-width: unset !important;
+}
+

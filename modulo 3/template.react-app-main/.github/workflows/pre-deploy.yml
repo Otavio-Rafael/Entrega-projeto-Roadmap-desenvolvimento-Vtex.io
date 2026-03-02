@@ -1,0 +1,13 @@
+name: Pre-Deploy
+
+on:
+  pull_request:
+    branches: [main, master]
+    types: [opened, synchronize, reopened]
+
+jobs:
+  pre-deploy:
+    if: startsWith(github.head_ref, 'release/')
+    name: Pre-Deploy
+    uses: quality-digital/reusable-workflows/.github/workflows/pre-deploy.yml@main
+    secrets: inherit

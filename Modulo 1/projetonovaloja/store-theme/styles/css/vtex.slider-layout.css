@@ -1,0 +1,56 @@
+.sliderLayoutContainer { 
+  justify-content: center;
+}
+
+.sliderLayoutContainer--carousel {
+  background-color: #ffffff;
+  min-height: 450px;
+}
+
+.sliderTrackContainer {
+  max-width: 100%;
+}
+
+.paginationDotsContainer {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.layoutContainer--shelf {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 96rem;
+  min-height: 550px;
+}
+
+.slide--shelf {
+  margin-bottom: 25px;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  min-height: 550px;
+}
+.slide--hidden{
+  max-width: unset !important;
+}
+.sliderLayoutContainer--shelf-otavio{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.slide--shelf-otavio:hover :global(.vtex-product-summary-2-x-brandName){
+  font-weight: 700;
+  transition: font-weight .25s ease;
+}
+.slide--shelf-otavio:hover :global(.vtex-product-price-1-x-currencyContainer--summary){
+  font-weight: 700;
+  transition: font-weight .25s ease;
+}
+.slide--shelf-otavio:hover :global(.vtex-product-price-1-x-sellingPriceValue--summary){
+  font-weight: 700;
+  transition: font-weight .25s ease;
+}
+.slide--shelf-otavio:hover :global(.vtex-product-summary-2-x-imageContainer) :global(.vtex-product-summary-2-x-mainImageHovered){
+  opacity: 0;
+}
+.slide--shelf-otavio:hover :global(.vtex-product-summary-2-x-imageContainer) :global(.vtex-product-summary-2-x-hoverImage){
+  display: inline;
+}

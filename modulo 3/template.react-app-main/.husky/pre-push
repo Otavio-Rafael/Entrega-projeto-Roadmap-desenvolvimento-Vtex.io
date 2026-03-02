@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Validate Protected Branches
+sh ./ci/protected-branches.sh
