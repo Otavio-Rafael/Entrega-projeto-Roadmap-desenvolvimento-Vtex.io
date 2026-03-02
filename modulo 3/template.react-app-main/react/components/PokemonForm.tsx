@@ -3,14 +3,15 @@ import React, { useEffect } from 'react'
 import classNames from 'classnames'
 import { useCssHandles } from 'vtex.css-handles'
 import "./style.css"
+import { Card } from './Card/Card'
 
-const CSS_HANDLES = ['example'] as const
+const CSS_HANDLES = ['example', 'button', 'input'] as const
 
 /**
  * @description Example React Component.
  * @version 1.0.0
  */
-const Example: FC = () => {
+const PokemonForm: FC = () => {
   const { handles } = useCssHandles(CSS_HANDLES)
   const body = {pokemon: '25'}
 const setPokemon = async () => {
@@ -27,10 +28,19 @@ const setPokemon = async () => {
     setPokemon()
   }, [])
   return (
-    <p className={classNames(handles.example, 'flex')}>
+ <form>
+  <Card pokemonId={30}/>
+  <input className={classNames(handles.input, 'flex')} id='pokemonId' name='pokemonId' type='text' placeholder='Digite o ID do Pokemon'>
+  
+  </input>
+     <p className={classNames(handles.example, 'flex')}>
       This is an example component
     </p>
+    <button className={classNames(handles.button, 'flex')}>
+  Conheça o pokemon
+    </button>
+ </form>
   )
 }
 
-export default Example
+export default PokemonForm

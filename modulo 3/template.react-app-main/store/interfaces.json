@@ -1,5 +1,5 @@
 {
-  "example-component": {
-    "component": "Example"
+  "pokemon-form": {
+    "component": "PokemonForm"
   }
 }

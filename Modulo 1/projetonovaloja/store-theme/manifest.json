@@ -1,5 +1,5 @@
 {
-  "vendor": "vtex",
+  "vendor": "acctglobal",
   "name": "store-theme",
   "version": "5.2.0",
   "builders": {
@@ -65,9 +65,6 @@
     "vtex.css-handles": "1.x",
     "acctglobal.reactpokeapi": "0.x",
     "acctglobal.service-example": "0.x"
-  },
-  "peerDependencies": {
-    "vtex.reviews-and-ratings": "3.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
