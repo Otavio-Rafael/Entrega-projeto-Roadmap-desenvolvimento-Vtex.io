@@ -12,9 +12,9 @@ export async function getPokemon(ctx: Context, next: () => Promise<any>) {
   try {
   const response: any = await Pokeapi.getPokemonId(pokemon)
 
-if (response.height > 15) {
+if (response.height >= 15) {
       ctx.status = 400
-      ctx.body = { message: "Pokémon reprovado: altura maior que 15" }
+      ctx.body = { message: "Pokémon reprovado: altura maior ou igual a 15" }
     } else {
       ctx.status = 200
       ctx.body = response

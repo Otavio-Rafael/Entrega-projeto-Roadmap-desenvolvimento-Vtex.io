@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 import classNames from 'classnames'
 import { useCssHandles } from 'vtex.css-handles'
 import "./style.css"
@@ -13,31 +13,54 @@ const CSS_HANDLES = ['example', 'button', 'input'] as const
  */
 const PokemonForm: FC = () => {
   const { handles } = useCssHandles(CSS_HANDLES)
-  const body = {pokemon: '25'}
+
+  const [pokemonId, setPokemonId] = useState <any> ()
+
+  const [pokemon, setPokemonState] = useState({})
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  setPokemonId(e.target.value)
+}
+
+  
 const setPokemon = async () => {
+  const body = {pokemon: Number(pokemonId)}
+  if (body.pokemon === 0 ) {
+    alert('Digite um ID válido')
+  }
+  console.log(typeof pokemonId)
+
   const poke30 = await fetch('/_v/poke/', {
     method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
   })
   const poke30json = await poke30.json()
+  setPokemonState(poke30json)
   console.log(poke30json)
 }
 
-  useEffect(() => {
-    console.log('Example component mounted')
-    setPokemon()
-  }, [])
   return (
  <form>
-  <Card pokemonId={30}/>
-  <input className={classNames(handles.input, 'flex')} id='pokemonId' name='pokemonId' type='text' placeholder='Digite o ID do Pokemon'>
-  
-  </input>
+  <Card pokemonId={pokemon}/>
+  <input 
+  className={classNames(handles.input, 'flex')} 
+  id='pokemonId' 
+  name='pokemonId' 
+  type='text' placeholder='Digite o ID do Pokemon'
+  value={pokemonId}
+  onChange={handleInputChange}/>
+
      <p className={classNames(handles.example, 'flex')}>
       This is an example component
     </p>
-    <button className={classNames(handles.button, 'flex')}>
-  Conheça o pokemon
+    <button 
+    className={classNames(handles.button, 'flex')}
+    type="button"
+    onClick={() => setPokemon()}
+
+    >
+    Conheça o pokemon
     </button>
  </form>
   )
