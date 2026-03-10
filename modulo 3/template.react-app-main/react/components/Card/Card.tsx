@@ -1,11 +1,23 @@
 import React from 'react'
-export const Card = (parametros: any) => {
-    console.log(parametros)
-  return (
-    <div >
-      {parametros.pokemonId.name}
-      {parametros.pokemonId.sprites ? <img src={parametros.pokemonId.sprites.front_default} alt={parametros.pokemonId.name} /> : null}
-      {parametros.pokemonId.height}
-    </div>
-  )
+
+interface CardProps {
+  pokemonId: {
+    name: string
+    height: number
+    sprites: { front_default: string }
+    [key: string]: any
+  }
 }
+
+export const Card = ({ pokemonId: pokemon }: CardProps) => (
+  <>
+    <div className="pkf-card-field">
+      <span className="pkf-card-label">Nome:</span>
+      <span className="pkf-card-value pkf-card-value--name">{pokemon.name}</span>
+    </div>
+    <div className="pkf-card-field">
+      <span className="pkf-card-label">Altura:</span>
+      <span className="pkf-card-value">{pokemon.height}</span>
+    </div>
+  </>
+)
