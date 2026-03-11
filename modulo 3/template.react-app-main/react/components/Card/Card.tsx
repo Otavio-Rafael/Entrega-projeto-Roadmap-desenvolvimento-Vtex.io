@@ -1,23 +1,15 @@
 import React from 'react'
+import { PokemonData } from '../../typings/pokemon'
 
-interface CardProps {
-  pokemonId: {
-    name: string
-    height: number
-    sprites: { front_default: string }
-    [key: string]: any
-  }
-}
-
-export const Card = ({ pokemonId: pokemon }: CardProps) => (
+export const Card = ( PokemonData : PokemonData ) => (
   <>
     <div className="pkf-card-field">
       <span className="pkf-card-label">Nome:</span>
-      <span className="pkf-card-value pkf-card-value--name">{pokemon.name}</span>
+      <span className="pkf-card-value pkf-card-value--name">{PokemonData.name}</span>
     </div>
     <div className="pkf-card-field">
       <span className="pkf-card-label">Altura:</span>
-      <span className="pkf-card-value">{pokemon.height}</span>
+      <span className="pkf-card-value">{PokemonData.height}</span>
     </div>
   </>
 )
