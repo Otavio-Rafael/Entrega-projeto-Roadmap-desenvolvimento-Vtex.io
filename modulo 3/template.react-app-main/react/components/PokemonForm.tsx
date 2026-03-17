@@ -58,23 +58,20 @@ const PokemonForm: FC = () => {
     setStatus('loading')        
 
     try {
-      const controller = new AbortController()
-      const timeoutId = setTimeout(() => controller.abort(), 5000)
 
       const response = await fetch('/_v/poke/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ pokemon: Number(pokemonId) }),
-        signal: controller.signal,
     })
-
-    clearTimeout(timeoutId)
+      
 
       if (!response.ok) {
         setStatus(response.status === 400 ? 'error_height' : 'error_api')
       return
     }
-
+      console.log ("Testetimeout")
+      
     const data: PokemonData = await response.json()
       setPokemonState(data)
       setStatus('success')
