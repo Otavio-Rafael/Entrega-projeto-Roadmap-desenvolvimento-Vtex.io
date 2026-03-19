@@ -6,7 +6,7 @@ import { CSS_HANDLES, TYPE_COLORS } from '../utils'
 import { PokemonData, Status } from '../typings/pokemon'
 import "./style.css"
 
-const getTypeColor = (types: string[]): string => TYPE_COLORS[types[0]] ?? '#6C63FF'
+const getTypeColor = (types: string[]): string => TYPE_COLORS[types[0]] ?? ''
 
 
 const PokemonForm: FC = () => {
@@ -70,7 +70,6 @@ const PokemonForm: FC = () => {
         setStatus(response.status === 400 ? 'error_height' : 'error_api')
       return
     }
-      console.log ("Testetimeout")
       
     const data: PokemonData = await response.json()
       setPokemonState(data)

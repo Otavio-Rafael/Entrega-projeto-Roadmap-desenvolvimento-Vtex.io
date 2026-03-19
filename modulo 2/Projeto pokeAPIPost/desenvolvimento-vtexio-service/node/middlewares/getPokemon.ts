@@ -59,7 +59,7 @@ export async function getPokemon(ctx: Context, next: () => Promise<any>) {
 
   const timeout = () => {
     const testetimeout = new Promise<never>((_resolve, reject) => {
-      setTimeout(() => reject(new Error("TIMEOUT")), 500)
+      setTimeout(() => reject(new Error("TIMEOUT")), 250)
     })
 
     const response = Pokeapi.getPokemonId(pokemon)
