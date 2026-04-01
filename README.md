@@ -1,4 +1,4 @@
-# Projeto Priolli Módulos
+# Projeto Pokeapi desenvolvimento Vtex.io Módulos
 
 Projeto dividido em:
 - Módulo 1 - Store Theme
